@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+</head>
+
+<body>
+
+    <h1>Student Management System</h1>
+
+    <h2>Registered Students</h2>
+
+    <a href="{% url 'register' %}">Add New Student</a>
+
+    {% for student in students %}
+
+        <p>Name: {{ student.name }}</p>
+        <p>Email: {{ student.email }}</p>
+        <p>Course: {{ student.course }}</p>
+        <p>delete: {{Student.delete}}
+        <p>add: {{Student.add}} 
+        
+
+        <hr>
+
+    {% empty %}
+
+        <p>No students registered yet.</p>
+
+    {% endfor %}
+
+</body>
+</html>
